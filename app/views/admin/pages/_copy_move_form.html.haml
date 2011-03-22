@@ -1,9 +1,9 @@
 - status_msg = "#{self.request.path_parameters[:action].humanize} is being performed on #{@page.title} page ..."
 - form_tag self.request.path_parameters, :method => :post, 'data-onsubmit_status' => status_msg  do
   %p
-    %label= "Page: #{@page.title} ( #{@page.path} )"
+    %label= "Page: #{@page.title} ( #{@page.slug} )"
   %p
-    %label= "Parent: #{@page.parent.title} ( #{@page.parent.path} )"
+    %label= "Parent: #{@page.parent.title} ( #{@page.parent.slug} )"
   %hr
   %p
     %label{:for => 'parent_id'} 
